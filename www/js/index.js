@@ -27,6 +27,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('offline', this.onOffline, false);
     },
     // deviceready Event Handler
     //
@@ -35,14 +36,27 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
     },
+    onOffline: function() {
+        console.log("Offline");
+        if ((screen.width == 320) && (screen.height == 480)) {
+            document.body.background="img/iosSplash/Default~iphoneNoInternet.png";
+        }
+        else if ((screen.width == 640) && (screen.height == 960)) {
+            document.body.background="img/iosSplash/Default@2x~iphoneNoInternet.png";
+        }
+        else if ((screen.width == 640) && (screen.height == 1136)) {
+            document.body.background="img/iosSplash/Default-568h@2x~iphoneNoInternet.png";
+        }
+        else {
+           document.body.background="img/iosSplash/Default-568h@2x~iphoneNoInternet.png";
+        }
+    },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var response = app.httpGet("http://finch-melrose.ru/media/domashniy/config.json");
         var JSONObject = JSON.parse(response);
 
         window.open(JSONObject.dataUrl);
-
-
     },
 
     httpGet: function(theUrl) {

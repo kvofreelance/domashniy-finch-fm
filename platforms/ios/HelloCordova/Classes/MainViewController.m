@@ -71,10 +71,6 @@
     [super viewWillAppear:animated];
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

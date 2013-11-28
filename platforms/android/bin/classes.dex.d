@@ -1,0 +1,22 @@
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes.dex : \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/com/makeomatic/domashniyfinchfm/BuildConfig.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/com/makeomatic/domashniyfinchfm/HelloCordova.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/com/makeomatic/domashniyfinchfm/R$attr.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/com/makeomatic/domashniyfinchfm/R$drawable.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/com/makeomatic/domashniyfinchfm/R$string.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/com/makeomatic/domashniyfinchfm/R$xml.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/com/makeomatic/domashniyfinchfm/R.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$1.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$2.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$3.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$4.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$1.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$2.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$3.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$4.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$5.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$5.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser$InAppBrowserClient.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppBrowser.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/classes/org/apache/cordova/inappbrowser/InAppChromeClient.class \
+/Applications/MAMP/htdocs/domashniy/platforms/android/bin/dexedLibs/cordova-3.2.0-9c3e011662f50f29cee32a5949048e31.jar \
