@@ -26,14 +26,40 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
-    <body>
+    <body onload="setImageScreen()">
         <div class="app">
             <div id="deviceready" class="blink"></div>
+        </div>
+       <div style="text-align:center; width:100%; position:fixed; bottom: 50px;">
+            <button  id="refreshBtn" onclick="app.initialize()" visibility="hidden" >Обновить</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+
+            function setImageScreen() {
+                 if ((screen.width == 320) && (screen.height == 480)) {
+                    document.body.background="img/iosSplash/Default~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                    
+                }
+                else if ((screen.width == 640) && (screen.height == 960)) {
+                    document.body.background="img/iosSplash/Default@2x~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                    
+                }
+                else if ((screen.width == 640) && (screen.height == 1136)) {
+                    document.body.background="img/iosSplash/Default-568h@2x~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                   
+                }
+                else {
+                    document.body.background="img/iosSplash/Default-568h@2x~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                   
+                }
+            }
         </script>
     </body>
 </html>

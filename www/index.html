@@ -30,8 +30,8 @@
         <div class="app">
             <div id="deviceready" class="blink"></div>
         </div>
-        <div style="width:100%; margin-left:auto; margin-right:auto; position:fixed; bottom: 50px;">
-            <button id="refreshBtn" style=" height: 25px; padding: 0 20px; background-color: #ac2323; font-size: 15px; display: block; margin:0 auto; border-radius: 10px; color: white;" onclick="app.initialize()" >Обновить</button>
+       <div style="text-align:center; width:100%; position:fixed; bottom: 50px;">
+            <button  id="refreshBtn" onclick="app.initialize()" visibility="hidden" >Обновить</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
@@ -39,17 +39,25 @@
             app.initialize();
 
             function setImageScreen() {
-                if ((screen.width == 320) && (screen.height == 480)) {
+                 if ((screen.width == 320) && (screen.height == 480)) {
                     document.body.background="img/iosSplash/Default~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                    
                 }
                 else if ((screen.width == 640) && (screen.height == 960)) {
                     document.body.background="img/iosSplash/Default@2x~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                    
                 }
                 else if ((screen.width == 640) && (screen.height == 1136)) {
                     document.body.background="img/iosSplash/Default-568h@2x~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                   
                 }
                 else {
                     document.body.background="img/iosSplash/Default-568h@2x~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                   
                 }
             }
         </script>
