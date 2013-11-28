@@ -27,7 +27,9 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener("touchstart", function() {},false);
         document.addEventListener('offline', this.onOffline, false);
+        document.addEventListener("backbutton", this.onBackKeyDown, false);
     },
     // deviceready Event Handler
     //
@@ -35,27 +37,42 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        
+    },
+    onBackKeyDown: function() {
+        fireEvent(document,'backButtonPressed');
     },
     onOffline: function() {
         console.log("Offline");
+        
         if ((screen.width == 320) && (screen.height == 480)) {
             document.body.background="img/iosSplash/Default~iphoneNoInternet.png";
+            document.body.backgroundSize = "100% 100%";
+
         }
         else if ((screen.width == 640) && (screen.height == 960)) {
             document.body.background="img/iosSplash/Default@2x~iphoneNoInternet.png";
+            document.body.backgroundSize = "100% 100%";
+
         }
         else if ((screen.width == 640) && (screen.height == 1136)) {
             document.body.background="img/iosSplash/Default-568h@2x~iphoneNoInternet.png";
+            document.body.backgroundSize = "100% 100%";
+      
         }
         else {
            document.body.background="img/iosSplash/Default-568h@2x~iphoneNoInternet.png";
+           document.body.backgroundSize = "100% 100%";
+          
         }
+        document.getElementById('refreshBtn').style.visibility="visible";
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var response = app.httpGet("http://finch-melrose.ru/media/domashniy/config.json");
         var JSONObject = JSON.parse(response);
-
+        
+        document.getElementById('refreshBtn').style.visibility="hidden";
         window.open(JSONObject.dataUrl);
     },
 

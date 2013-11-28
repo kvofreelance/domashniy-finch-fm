@@ -36,9 +36,9 @@ body {
         color-stop(0.51, #E4E4E4)
     );*/
    /* background: rgb(250, 248, 242);
-    /*background-image:url(../img/background.png);
+    /*background-image:url(../img/background.png);*/
     background-repeat:no-repeat;
-    background-size:100% 100%;*/
+    background-size:100% 100%;
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
@@ -46,6 +46,7 @@ body {
     margin:0px;
     padding:0px;
     text-transform:uppercase;
+    text-align:center;
     width:100%;
 }
 
@@ -61,6 +62,22 @@ body {
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
+}
+
+#refreshBtn {
+    height: 50px;
+    padding: 0 20px;
+    background-color: #ac2323;
+    font-size: 15px;
+    display: block;
+    margin:0 auto;
+    border-radius: 10px;
+    color: white;
+    visibility: hidden;
+}
+
+#refreshBtn:active {
+    color: black;
 }
 
 /* Landscape layout (with min-width) */

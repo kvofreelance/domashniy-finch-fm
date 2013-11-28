@@ -22,7 +22,7 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,  target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
@@ -30,27 +30,34 @@
         <div class="app">
             <div id="deviceready" class="blink"></div>
         </div>
-        <div style="width:100%; margin-left:auto; margin-right:auto; position:fixed; bottom: 50px;">
-            <button id="refreshBtn" style=" height: 25px; padding: 0 20px; background-color: #ac2323; font-size: 15px; display: block; margin:0 auto; border-radius: 10px; color: white;" onclick="app.initialize()" >Обновить</button>
+       <div style="text-align:center; width:100%; position:fixed; bottom: 50px;">
+            <button  id="refreshBtn" onclick="app.initialize()" >Обновить</button>
         </div>
-        
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
 
             function setImageScreen() {
-                if ((screen.width == 320) && (screen.height == 480)) {
+                 if ((screen.width == 320) && (screen.height == 480)) {
                     document.body.background="img/iosSplash/Default~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                    
                 }
                 else if ((screen.width == 640) && (screen.height == 960)) {
                     document.body.background="img/iosSplash/Default@2x~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                    
                 }
                 else if ((screen.width == 640) && (screen.height == 1136)) {
                     document.body.background="img/iosSplash/Default-568h@2x~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                   
                 }
                 else {
                     document.body.background="img/iosSplash/Default-568h@2x~iphone.png";
+                    document.body.backgroundSize = "100% 100%";
+                   
                 }
             }
         </script>
