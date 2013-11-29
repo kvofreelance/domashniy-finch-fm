@@ -30,7 +30,9 @@ public class Domashniy extends CordovaActivity
         super.onCreate(savedInstanceState);
         super.init();
         // Set by <content src="index.html" /> in config.xml
-        super.loadUrl(Config.getStartUrl());
+        super.activityResultKeepRunning = false;
+        super.clearCache();
+        super.loadUrl("file:///android_asset/www/index.html");
         //super.loadUrl("file:///android_asset/www/index.html")
     }
 }

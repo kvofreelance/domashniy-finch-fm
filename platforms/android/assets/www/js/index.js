@@ -37,10 +37,11 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        document.getElementById('refreshBtn').style.visibility="hidden";
+        
     },
     onBackKeyDown: function() {
-        fireEvent(document,'backButtonPressed');
+        window.fireEvent('backButtonPressed');
+	navigator.app.exitApp();
     },
     onOffline: function() {
         console.log("Offline");
@@ -71,7 +72,8 @@ var app = {
     receivedEvent: function(id) {
         var response = app.httpGet("http://finch-melrose.ru/media/domashniy/config.json");
         var JSONObject = JSON.parse(response);
-
+        
+        document.getElementById('refreshBtn').style.visibility="hidden";
         window.open(JSONObject.dataUrl);
     },
 
